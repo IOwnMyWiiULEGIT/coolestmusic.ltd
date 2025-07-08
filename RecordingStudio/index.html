@@ -18,6 +18,11 @@
       text-align: center;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     .sign {
       display: flex;
       align-items: center;
@@ -25,6 +30,7 @@
       padding: 2rem;
       border: 2px solid black;
       max-width: 800px;
+      cursor: pointer;
     }
 
     .circle {
@@ -60,14 +66,27 @@
   </style>
 </head>
 <body>
-  <div class="sign">
-    <div class="circle"></div>
-    <div class="label">Recording Studio™</div>
-  </div>
+  <a href="mailto:coolestmusic@gmail.com">
+    <div class="sign">
+      <div class="circle" onclick="playBeep()"></div>
+      <div class="label">Recording Studio™</div>
+    </div>
+  </a>
   <div class="info">
     Welcome to the studio. Sessions available by appointment.<br>
     Email <a href="mailto:coolestmusic@gmail.com">coolestmusic@gmail.com</a> to inquire.
   </div>
+
+  <audio id="beep-sound" src="https://IOwnMyWiiULEGIT.github.io/coolestmusic.ltd/RecordingStudio/assets/audio/lazerfart.wav"></audio>
+  <script>
+    function playBeep() {
+      const beep = document.getElementById('beep-sound');
+      if (beep) {
+        beep.currentTime = 0;
+        beep.play();
+      }
+    }
+  </script>
 </body>
 </html>
 
