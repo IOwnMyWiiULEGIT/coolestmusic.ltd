@@ -93,7 +93,11 @@
     Email <a href="mailto:coolestmusic@gmail.com">coolestmusic@gmail.com</a> to inquire.
   </div>
 
-  <audio id="beep-sound" src="https://iownmywiiulegit.github.io/coolestmusic.ltd/assets/audio/lazerfart.wav"></audio>
+  <audio id="beep-sound">
+    <source src="https://iownmywiiulegit.github.io/coolestmusic.ltd/RecordingStudio/assets/audio/lazerfart.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
   <script>
     function playBeep() {
       const beep = document.getElementById('beep-sound');
@@ -105,5 +109,3 @@
   </script>
 </body>
 </html>
-
-
